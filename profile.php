@@ -158,36 +158,18 @@ entrepreneurship. As a social entrepreneur, what is success for you?</br>
 
 
 <script>
-var myVar;
- 
-var currentdate = new Date(); 
-var datetime = "Last Sync: " 
-                + currentdate.getHours() + ":"  
-                + currentdate.getMinutes() + ":" 
-                + currentdate.getSeconds();
-document.getElementById("demo").innerHTML = datetime.toString();
-var phone=0;
-function myFunction() {
- window.open("logout.php","_self")
-  $.get("index.php");
-  var done=0;
+var x;
+	function myFunction() {
+   document.querySelector("#test").style.display = "block";
+   x= setTimeout(Func, 3600000);
 
 }
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
+ function Func(){
+  window.open("logout.php","_self")
+  $.get("index.php");
+ }
+ 
+
 
 
 
